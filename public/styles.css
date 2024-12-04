@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+#mahjong-tiles {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  grid-gap: 10px;
+}
+
+#player-role {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 6px solid #ccc;
+  text-align: center;
+}
+
+.tile {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 2px solid #ccc;
+  font-size: 24px;
+  position: relative; /* 确保子元素定位正确 */
+}
+
+.tile img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain; /* 保持图片比例 */
+  pointer-events: none; /* 禁止图片捕获拖拽事件 */
+}
+
+.tile.draggable {
+  cursor: grab;
+}
+
+#volumeSlider {
+  width: 200px; /* 设置滑动条宽度 */
+  height: 5px; /* 设置滑动条高度 */
+  background-color: #ccc; /* 设置滑动条背景颜色 */
+}
+
+.tile:empty:hover {
+  background-color: #e0e0e0;
+}
+
+/* 高亮当前玩家棋子 */
+/* .tile[style*="border-color: red"] {
+  background-color: rgba(255, 0, 0, 1);
+}
+
+.tile[style*="border-color: blue"] {
+  background-color: rgba(0, 0, 255, 1);
+} */

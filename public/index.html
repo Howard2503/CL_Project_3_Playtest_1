@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahjong Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <audio id="bgMusic" loop></audio>
+  <button id="playButton">Click to play music</button>
+  <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+  <h1>Mahjong Auto Chess Game</h1>
+  <div id="player-role"></div>
+  <div id="mahjong-tiles">
+    <!-- 可拖拽的麻将牌 -->
+    <div class="tile draggable" draggable="true" data-tile="1_tiao">
+      <img src="images/1_tiao.png" alt="1 Tiao">
+    </div>
+    <div class="tile draggable" draggable="true" data-tile="1_tong">
+      <img src="images/1_tong.png" alt="1 Tong">
+    </div>
+    <div class="tile draggable" draggable="true" data-tile="1_wan">
+      <img src="images/1_wan.png" alt="1 Wan">
+    </div>
+  </div>
+  <div id="game-board"></div>
+  
+  <!-- <script type="text.javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script> -->
+  <!-- <script type="text.javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script> -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
